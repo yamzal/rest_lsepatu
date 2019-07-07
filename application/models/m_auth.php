@@ -49,7 +49,8 @@ class m_auth extends CI_Model
       $data = [
               'users_id' => $kode_user,
               'users_nama' => htmlspecialchars($this->input->post('users_nama',true)),
-              'users_password' => password_hash($this->input->post('users_password1'), PASSWORD_DEFAULT),
+//            'users_password' => password_hash($this->input->post('users_password1'), PASSWORD_DEFAULT),
+              'users_password' => md5($this->input->post('users_password1')),
               'users_email' => htmlspecialchars($this->input->post('users_email',true)),
               'users_level_id' => 2,
               'users_status' => 0

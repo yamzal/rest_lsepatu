@@ -43,7 +43,7 @@ class Auth extends CI_Controller {
 
             if($users['users_status'] == 1) {
 
-                if(password_verify($users_password, $users['users_password'])){
+                if(md5($users_password, $users['users_password'])){
                     $data = [
                         'users_email' => $users['users_email'],
                         'users_level_id' => $users['users_level_id'],
