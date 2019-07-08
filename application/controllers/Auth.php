@@ -35,15 +35,17 @@ class Auth extends CI_Controller {
     {
         //admin var
         $users_email = $this->input->post('users_email');
-        $users_password = $this->input->post('users_password');
+        $users_password = md5($this->input->post('users_password'));
 
-        $users = $this->db->get_where('tbl_users',['users_email' =>$users_email])->row_array();
+        $users = $this->db->get_where('tbl_users',['users_email'=>$users_email,'users_password'=>$users_password])->row_array();
 
         if($users){
 
-            if($users['users_status'] == 1) {
+            if($users['users_status'] == 1) { 
 
-                if(md5($users_password, $users['users_password'])){
+//                if(password_verify($users_password, $users['users_password'])){
+                  if($users){
+                    
                     $data = [
                         'users_email' => $users['users_email'],
                         'users_level_id' => $users['users_level_id'],
