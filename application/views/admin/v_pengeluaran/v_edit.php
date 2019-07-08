@@ -24,15 +24,8 @@
 
 </head>
 <?php
-        $this->load->view('admin/navbar');
-   ?>
-
-<!-- <ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li><a href="">Data Admin</a></li>
-  <li class="active">Edit Data</li>
-</ol> -->
+$this->load->view('v_partials/v_sidebar');
+?>
 
 <!-- page content -->
 <div class="container">
