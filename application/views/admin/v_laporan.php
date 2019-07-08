@@ -69,7 +69,7 @@
         </div>
 
             <button type="submit">Tampilkan</button>
-            <a href="<?php echo base_url(); ?>" style="margin-left:20px">Reset Filter</a>
+            <a href="<?php echo base_url("/admin/laporan"); ?>" style="margin-left:20px">Reset Filter</a>
     </form>
         <hr>
 
