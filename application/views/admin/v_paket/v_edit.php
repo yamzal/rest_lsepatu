@@ -44,22 +44,22 @@ $this->load->view('v_partials/v_sidebar');
 						<form action="<?php echo base_url(). 'admin/data_paket/update'; ?>" method="post">
 
 									<div class="form-group">
-										<label>ID Pengeluaran</label>
+										<label>ID Paket</label>
 										<td><input class="form-control" type="text" name="pengeluaran_id" disabled value="<?php echo $p->paket_id ?>"></td>
 									</div>
 
 									<div class="form-group">
-										<label>Tanggal Pengeluaran</label>
+										<label>Nama Paket</label>
 										<td><input class="form-control" type="text" name="pengeluaran_tanggal" value="<?php echo $p->paket_nama ?>"></td>
 									</div>
 
 									<div class="form-group">
-										<label>Nama Pengeluaran</label>
+										<label>Satuan</label>
 										<td><input class="form-control" type="text" name="pengeluaran_nama" value="<?php echo $p->paket_satuan ?>"></td>
 									</div>
 
 									<div class="form-group">
-										<label>Total Pengeluaran</label>
+										<label>Harga</label>
 										<td><input class="form-control" type="text" name="pengeluaran_harga" value="<?php echo $p->paket_harga ?>"></td>
 									</div>
 

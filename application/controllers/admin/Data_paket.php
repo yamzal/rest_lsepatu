@@ -80,7 +80,7 @@
         {
             $where = array('paket_id' => $paket_id);
             $data['tbl_paket'] = $this->M_paket->edit_data($where,'tbl_paket')->result();
-            $this->load->view('admin/v_paket/v_edit',$data);
+            $this->load->view('admin/v_paket/v_edit',$data);    
         }
 
         function update()
