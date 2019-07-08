@@ -7,7 +7,7 @@
             $this->load->model('M_paket');
         }
 
-    
+      
         function index()
         {
             $data['title'] = 'Data Paket';

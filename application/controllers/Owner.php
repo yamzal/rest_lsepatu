@@ -5,6 +5,7 @@ class Owner extends CI_Controller{
 			parent::__construct();
 		 	is_logged_in();
 			$this->load->model('M_menu');
+			$this->load->model('M_paket');
 			$this->load->model('M_pegawai');
 
 	}
@@ -13,8 +14,8 @@ class Owner extends CI_Controller{
     {
         $data['title'] = 'Home';
         $data['users'] = $this->db->get_where('tbl_users',['users_email' => $this->session->userdata('users_email')])->row_array();
-				$data['menu'] = $this->db->get_where('tbl_users', ['users_email' => $this->session->userdata('users_email')])->row_array();
-				$this->load->model('M_menu','AccessMenu');
+        $data['menu'] = $this->db->get_where('tbl_users', ['users_email' => $this->session->userdata('users_email')])->row_array();
+        $this->load->model('M_menu','AccessMenu');
 
         $this->load->view('v_partials/v_index_header',$data);
         $this->load->view("v_partials/v_sidebar");
@@ -26,7 +27,7 @@ class Owner extends CI_Controller{
 		{
 			$data['title'] = 'Data Pegawai';
 			$data['pegawai'] = $this->M_pegawai->getPegawai();
-			
+
 			$this->load->view('v_partials/v_index_header',$data);
 			$this->load->view('v_partials/v_sidebar',$data);
 			$this->load->view('v_owner/v_data_pegawai',$data);
