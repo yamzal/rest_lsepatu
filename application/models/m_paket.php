@@ -1,8 +1,5 @@
 <?php  
 
-/**
-* 
-*/
 class m_paket extends CI_Model
 {
 	
