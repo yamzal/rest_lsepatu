@@ -54,7 +54,7 @@
         }
 
         function update(){
-
+            
             $pengeluaran_tanggal = $this->input->post('pengeluaran_tanggal');
             $pengeluaran_nama = $this->input->post('pengeluaran_nama');
             $pengeluaran_harga = $this->input->post('pengeluaran_harga');
