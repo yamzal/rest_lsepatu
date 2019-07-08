@@ -11,7 +11,7 @@
         function index()
         {
             $data['title'] = 'Data Paket';
-            $data['paket'] = $this->m_paket->tampil_paket()->result();
+            $data['paket'] = $this->M_paket->tampil_paket()->result();
             // $this->load->view('admin/v_data_paket', $data);
             $this->load->view('v_partials/v_index_header',$data);
           	$this->load->view('v_partials/v_sidebar',$data);
@@ -23,7 +23,7 @@
         public function	listPaket()
         {
         	$data['title'] = 'Menu Paket';
-        	$data['paket'] = $this->m_paket->tampil_paket()->result();
+        	$data['paket'] = $this->M_paket->tampil_paket()->result();
 
         	$this->load->view('v_partials/v_index_header',$data);
         	$this->load->view('v_partials/v_sidebar',$data);
