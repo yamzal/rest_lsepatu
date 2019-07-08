@@ -76,14 +76,14 @@
 
         function edit($paket_id)
         {
-            $where = array('id' => $paket_id);
+            $where = array('paket_id' => $paket_id);
             $data['tbl_paket'] = $this->M_paket->edit_data($where,'tbl_paket')->result();
             $this->load->view('v_edit',$data);
         }
 
         function update()
         {
-            $paket_id = $this->input->post('id');
+            $paket_id = $this->input->post('paket_id');
             $paket_nama = $this->input->post('paket_nama');
             $paket_satuan = $this->input->post('paket_satuan');
             $paket_harga = $this->input->post('paket_harga');
@@ -95,7 +95,7 @@
             );
 
             $where = array(
-                'id' => $paket_id
+                'paket_id' => $paket_id
             );
 
             $this->M_paket->update_data($where,$data,'tbl_paket');
