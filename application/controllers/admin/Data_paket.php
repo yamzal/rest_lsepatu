@@ -4,10 +4,10 @@
         function __construct()
         {
             parent::__construct();
-            $this->load->model('M_paket');
+            $this->load->model('m_paket');
         }
 
-
+    
         function index()
         {
             $data['title'] = 'Data Paket';

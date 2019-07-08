@@ -46,7 +46,7 @@ class M_pegawai extends CI_Model {
     public function getPegawai()
     {
         $query = 'SELECT * FROM tbl_users WHERE users_level_id = 2';
-        return $this->db->query($query)->result_array();
+        return $this->db->query($query)->result_arra();
     }
 
     public function getToken($users_email,$token)
