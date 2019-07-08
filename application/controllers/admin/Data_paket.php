@@ -48,18 +48,20 @@
 
         function tambah_aksi()
         {
-
+            
+            $paket_id = $this->input->post('paket_id');
           $paket_nama = $this->input->post('paket_nama');
           $paket_satuan = $this->input->post('paket_satuan');
           $paket_harga = $this->input->post('paket_harga');
 
           $data = array(
+            'paket_id' => $paket_id,
               'paket_nama' => $paket_nama,
               'paket_satuan' => $paket_satuan,
               'paket_harga' => $paket_harga
               );
 
-          $paket_id=$this->M_paket->get_paket_id();
+        //   $paket_id=$this->M_paket->get_paket_id();
           $this->session->set_userdata('paket_id',$paket_id);
 
           $this->M_paket->input_data($data,'tbl_paket');
@@ -70,7 +72,7 @@
         {
             $where = array('paket_id' => $paket_id);
             $this->M_paket->hapus_data($where,'tbl_paket');
-            $data['tbl_paket'] = $this->M_paket->hapus_data($where,'tbl_paket')->result();
+            $data['tbl_paket'] = $this->M_paket->hapus_data($where,'tbl_paket');
             redirect('admin/data_paket/index');
         }
 
