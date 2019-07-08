@@ -78,7 +78,7 @@
         {
             $where = array('paket_id' => $paket_id);
             $data['tbl_paket'] = $this->M_paket->edit_data($where,'tbl_paket')->result();
-            $this->load->view('v_edit',$data);
+            $this->load->view('admin/v_paket/v_edit',$data);
         }
 
         function update()
@@ -99,7 +99,7 @@
             );
 
             $this->M_paket->update_data($where,$data,'tbl_paket');
-            redirect('data_paket/index');
+            redirect('admin/data_paket/index');
         }
 
 
