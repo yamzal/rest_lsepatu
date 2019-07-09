@@ -18,7 +18,11 @@ class Transaksi_keluar extends CI_Controller{
 		$kode_tm=$this->input->post('kode_tm');
 		$data['kode_dtm']=$this->m_penjualan->get_detail_transaksi_masuk($kode_tm);
 		$data['kode_tm']=$this->m_penjualan->get_transaksi_masuk($kode_tm);
+        
+        $data['title'] = 'Transaksi Keluar';
+        $this->load->view('v_partials/v_index_header',$data);
 		$this->load->view('admin/v_transaksi_keluar',$data);
+        $this->load->view('v_partials/v_index_footer');
 
 	}
 	function get_member(){

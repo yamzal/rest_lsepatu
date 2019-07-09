@@ -10,6 +10,8 @@ class Transaksi_masuk extends CI_Controller{
 
 	function index () {
 		$data['data'] = $this->m_paket->tampil_paket();  
+        
+        $data['title'] = 'Transaksi Masuk';
         $this->load->view('v_partials/v_index_header',$data);
 		$this->load->view('admin/v_Transaksi_masuk',$data);
 		$this->load->view('v_partials/v_index_footer');
@@ -103,26 +105,4 @@ class Transaksi_masuk extends CI_Controller{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
+?>
